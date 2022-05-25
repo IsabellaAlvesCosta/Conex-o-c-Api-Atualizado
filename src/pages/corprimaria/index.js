@@ -1,34 +1,55 @@
-import axios from “axios”
 
+
+import axios from 'axios'
 
 export default function Index() {
-    const [cor, setCor] = useState("");
-        return (
 
-          <main>
+         const [cor, setCor] = useState('');
 
-                  <h1> Cor Primária </h1>
+         const [resposta, setResposta] = useState('');
 
-                   <div>
+         async function verificarcorprimaria() {
 
-                         Cor: <input type='text’ />
+              const resp = await axios.get('htpp://localhost:5000/corprimaria/' +cor);
 
-                   </div>
+               if (resp.data.primaria === true) {
 
-                   <div>
+                       setResposta('SIM');
 
-                         <button>Verificar</button>
+               } else {
 
-                   </div>
+                      setResposta('NÃO');
 
-                   <div>
+               }
 
-                           É cor primária?
+         }
 
-                   </div> 
+           return (
 
-          </main>
+                 <main>
 
-  )
+                         <h1> Cor Primária </h1>
+
+                          <div>
+
+                                Cor: <input type='text' value ={cor} onChange={e => setCor(e.target.value)} />
+
+                          </div>
+
+                          <div>
+
+                                <button onClick={verificarcorprimaria}>Verificar</button>
+
+                          </div>
+
+                          <div>
+
+                                  É cor primária? {resposta}
+
+                          </div> 
+
+                 </main>
+
+         )
 
 }

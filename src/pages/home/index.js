@@ -1,11 +1,15 @@
-<ul>
 
-   <li> <Link to=’/corprimaria’> Cor primária</link> </li>
-
-   <li> <Link to=’/frequencia’> Frequencia</link> </li>
-
-   <li> <Link to=’/ingresso’>Ingresso</link> </li>
-
-   <li> <Link to=’/maiornumero’> Maior Número</link> </li>
-
-</ul>
+  export default function Index() {
+   return(
+      <main>
+         <div>
+            <ul>
+               <li><Link to/>'/corprimaria' Cor primária</li>
+               <li><Link to/>'/frequecia' Frequencia </li>
+               <li><Link to/>'/ingresso' Frequencia </li>
+               <li><Link to/>'/maiornumero' Maior Número </li>
+            </ul>
+         </div>
+      </main>
+   )
+  }

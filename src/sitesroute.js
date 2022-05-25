@@ -15,22 +15,25 @@ export default function SiteRoutes() {
        return (
 
       <BrowserRouter>
+         <Routes>
+            <Router path='/'element= {<Home/>} />
 
-            <Routes>
+           <Router path='/corrimaria' element= {<corprimaria/>} />    
 
-                 <Router path='/'element= {<Home/>} />
+            <Router path='/frequencia' element= {<frequencia/>} />
 
-           <Router path='/corrimaria’ element= {<corprimaria/>} />    
+            <Router path='/ingresso'element= {<ingresso/>} />
 
-            <Router path='/frequencia' element= {<frequencia/>} />   
-
-            <Router path='/ingresso’'element= {<ingresso/>} />
-
-            <Router path='/maiornumero’element= {<maiornumero/>} />
+            <Router path='/maiornumero'element= {<maiornumero/>} />
 
             </Routes>
-
       </BrowserRouter>
+
+            
+
+                
+
+      
 
 )
 
