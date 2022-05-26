@@ -10,8 +10,8 @@ export default function Index() {
     async function calcularmedia() {
 
         const resp = await axios.get('htpp://localhost:5000/media/' +nota1 +nota2 +nota3);
-   
-        
+        let x = dobro(nota1+nota2+ nota3)/3;
+        setResposta(x);
     }
     
 

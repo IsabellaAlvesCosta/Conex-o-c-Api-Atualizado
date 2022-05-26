@@ -5,9 +5,12 @@ export default function Index() {
   const [numero, setNumero] = useState(0);
   const[resposta, setResposta]=useState(0);
 
+
   async function calcular() {
 
     const resp = await axios.get('htpp://localhost:5000/dobro/' +numero);
+    let x = dobro(numero)
+    setResposta(x);
 
         numero:numero
 
